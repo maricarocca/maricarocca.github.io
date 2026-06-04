@@ -1,186 +1,354 @@
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marica Rocca</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      line-height: 1.7;
-      color: #2b2b2b;
-      background:
-        radial-gradient(circle at 10% 20%, #ffd6e8 0 10%, transparent 11%),
-        radial-gradient(circle at 90% 10%, #b6f2ff 0 9%, transparent 10%),
-        radial-gradient(circle at 80% 80%, #fff29b 0 12%, transparent 13%),
-        #fff8ee;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 22px;
-    }
+<title>Marica Rocca | Libri per bambini</title>
 
-    header {
-      background: #ffffffcc;
-      border: 3px solid #222;
-      border-radius: 28px;
-      padding: 36px;
-      box-shadow: 10px 10px 0 #ff8fab;
-      margin-bottom: 38px;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    h1 {
-      font-size: clamp(2.4rem, 7vw, 5rem);
-      line-height: 1;
-      margin: 0;
-      color: #ff4d6d;
-    }
+<style>
 
-    .subtitle {
-      font-size: 1.25rem;
-      max-width: 620px;
-      margin-top: 18px;
-    }
+:root{
+  --bg:#fff9f1;
+  --paper:#ffffff;
+  --text:#2b2b2b;
+  --accent:#ef6c8f;
+  --accent2:#5aa6d1;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 12px 20px;
-      border: 2px solid #222;
-      border-radius: 999px;
-      background: #b6f2ff;
-      color: #222;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 4px 4px 0 #222;
-    }
+*{
+  box-sizing:border-box;
+}
 
-    section {
-      background: #fff;
-      border: 2px solid #222;
-      border-radius: 24px;
-      padding: 28px;
-      margin: 28px 0;
-      box-shadow: 6px 6px 0 #ffd166;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    h2 {
-      margin-top: 0;
-      color: #118ab2;
-      font-size: 2rem;
-    }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+}
 
-    .books {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
-    }
+header{
+  padding:30px 6vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    article {
-      background: #fff8ee;
-      border: 2px dashed #ff8fab;
-      border-radius: 20px;
-      padding: 18px;
-    }
+.logo{
+  font-family:'DM Serif Display',serif;
+  font-size:2rem;
+  text-decoration:none;
+  color:var(--text);
+}
 
-    h3 {
-      margin-top: 0;
-      color: #ef476f;
-    }
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:600;
+}
 
-    footer {
-      text-align: center;
-      margin: 50px 0 20px;
-      font-size: 0.95rem;
-    }
+nav a:hover{
+  color:var(--accent);
+}
 
-    .tiny {
-      font-size: 2.2rem;
-    }
-  </style>
+.hero{
+  padding:60px 6vw 80px;
+}
+
+.hero h1{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(4rem,10vw,8rem);
+  line-height:.9;
+  margin:0;
+}
+
+.hero p{
+  max-width:700px;
+  margin-top:30px;
+  font-size:1.3rem;
+  line-height:1.7;
+}
+
+.button{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 24px;
+  border-radius:999px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.section-title{
+  font-family:'DM Serif Display',serif;
+  font-size:3rem;
+  margin-bottom:40px;
+}
+
+.books-section{
+  padding:0 6vw 100px;
+}
+
+.books{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+}
+
+.book{
+  text-decoration:none;
+  color:inherit;
+}
+
+.book:hover{
+  transform:translateY(-6px);
+}
+
+.cover{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.double-cover{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.small-cover{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.book h3{
+  margin:18px 0 8px;
+  font-size:1.3rem;
+}
+
+.book p{
+  color:#666;
+  line-height:1.6;
+}
+
+.about{
+  padding:100px 6vw;
+  background:white;
+}
+
+.about-content{
+  max-width:800px;
+}
+
+.about p{
+  font-size:1.2rem;
+  line-height:1.9;
+}
+
+.footer{
+  padding:60px 6vw;
+  text-align:center;
+}
+
+.footer a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+@media(max-width:700px){
+
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+}
+
+</style>
 </head>
+
 <body>
-  <div class="page">
 
-    <header>
-      <div class="tiny">🐋 🦏 ✨</div>
-      <h1>Marica Rocca<br>scrive cose</h1>
-      <p class="subtitle">
-        Libri per bambini con animali, emozioni, supereroi improbabili
-        e personaggi che cercano il proprio posto nel mondo.
-      </p>
-      <a class="button" href="https://www.instagram.com/m_acky/" target="_blank">
-        Seguimi su Instagram
-      </a>
-    </header>
+<header>
 
-    <section>
-      <h2>Chi sono</h2>
-      <p>
-        Sono Marica Rocca, autrice di libri per bambini.
-        Scrivo storie illustrate che parlano di amicizia, cura, mancanza,
-        piccoli superpoteri quotidiani e modi gentili di stare al mondo.
-      </p>
-      <p>
-        Nei miei libri ci sono rinoceronti, uccellini, bambini invisibili,
-        nonnine e supereroi che forse non sanno fare tutto,
-        ma sanno voler bene moltissimo.
-      </p>
-    </section>
+<a class="logo" href="#">
+Marica Rocca
+</a>
 
-    <section>
-      <h2>Libri</h2>
+<nav>
+  <a href="#libri">Libri</a>
+  <a href="estratti.html">Estratti</a>
+  <a href="#about">About</a>
+  <a href="https://www.instagram.com/m_acky/" target="_blank">Instagram</a>
+</nav>
 
-      <div class="books">
-        <article>
-          <h3>Mi manchi una balena</h3>
-          <p>
-            Una storia tenera su un rinoceronte, una bufaga
-            e tutti i modi in cui si può dire: “mi manchi”.
-          </p>
-        </article>
+</header>
 
-        <article>
-          <h3>Je t’aime gros comme une baleine</h3>
-          <p>
-            L’edizione francese di <em>Mi manchi una balena</em>,
-            pubblicata da Courtes et Longues.
-          </p>
-        </article>
+<section class="hero">
 
-        <article>
-          <h3>Lukas, nematomas berniukas</h3>
-          <p>
-            Una storia su un bambino che si sente invisibile
-            e sul bisogno di essere visti e accolti.
-          </p>
-        </article>
+<h1>
+Scrivo libri<br>
+per bambini.
+</h1>
 
-        <article>
-          <h3>Super Fluo / Super-duper</h3>
-          <p>
-            Un supereroe apparentemente inutile, una Nonnina speciale
-            e una storia sui poteri quotidiani della cura.
-          </p>
-        </article>
-      </div>
-    </section>
+<p>
+Storie illustrate con balene, rinoceronti, bambini invisibili,
+supereroi improbabili e piccoli modi di volersi bene.
+</p>
 
-    <section>
-      <h2>Contatti</h2>
-      <p>
-        Per letture, incontri, laboratori o saluti:
-        <a href="mailto:marica.rocca91@gmail.com">marica.rocca91@gmail.com</a>
-      </p>
-    </section>
+<a class="button"
+href="https://www.instagram.com/m_acky/"
+target="_blank">
+Seguimi su Instagram
+</a>
 
-    <footer>
-      © Marica Rocca · storie, balene e cose luminose
-    </footer>
+</section>
 
-  </div>
+<section class="books-section" id="libri">
+
+<h2 class="section-title">Libri</h2>
+
+<div class="books">
+
+<a class="book"
+href="https://www.edizionilapis.it/libro/9788878749702-mi-manchi-una-balena"
+target="_blank">
+
+<img class="cover"
+src="images/mi-manchi-una-balena.png"
+alt="Mi manchi una balena">
+
+<h3>Mi manchi una balena</h3>
+
+<p>
+Lapis Edizioni · illustrazioni di Arianna Alessi
+</p>
+
+</a>
+
+<a class="book"
+href="https://www.cleditions.com/jeunesse/albums/je-t-aime-gros-comme-une-baleine.html"
+target="_blank">
+
+<img class="cover"
+src="images/je-taime-gros-comme-une-baleine.png"
+alt="Je t'aime gros comme une baleine">
+
+<h3>Je t’aime gros comme une baleine</h3>
+
+<p>
+Edizione francese
+</p>
+
+</a>
+
+<a class="book"
+href="https://pinkmanas.com/produktas/lukas-nematomas-berniukas-as-invisible-as-lukas/"
+target="_blank">
+
+<img class="cover"
+src="images/lukas-nematomas-berniukas.png"
+alt="Lukas">
+
+<h3>Lukas, nematomas berniukas</h3>
+
+<p>
+Con Lucio Notarnicola
+</p>
+
+</a>
+
+<a class="book"
+href="https://corraini.com/it/super-fluo.html"
+target="_blank">
+
+<div class="double-cover">
+
+<img class="small-cover"
+src="images/superfluo.png"
+alt="Super Fluo">
+
+<img class="small-cover"
+src="images/super-duper.png"
+alt="Super Duper">
+
+</div>
+
+<h3>Super Fluo / Super-Duper</h3>
+
+<p>
+Edizione italiana e inglese · con Lucio Notarnicola
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<div class="about-content">
+
+<h2 class="section-title">About</h2>
+
+<p>
+Sono Marica Rocca, autrice di libri per bambini.
+Scrivo storie illustrate che parlano di amicizia,
+cura, mancanza, invisibilità e piccoli superpoteri quotidiani.
+</p>
+
+<p>
+Nei miei libri ci sono animali enormi,
+uccellini minuscoli, bambini che cercano il proprio posto
+e supereroi che forse non sanno fare tutto,
+ma sanno voler bene moltissimo.
+</p>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<p>
+📧
+<a href="mailto:marica.rocca91@gmail.com">
+marica.rocca91@gmail.com
+</a>
+</p>
+
+<p>
+📷
+<a href="https://www.instagram.com/m_acky/" target="_blank">
+@m_acky
+</a>
+</p>
+
+</footer>
+
 </body>
 </html>
+```
