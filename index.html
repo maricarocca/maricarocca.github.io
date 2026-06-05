@@ -60,7 +60,9 @@ nav a{
   font-weight:700;
 }
 
-nav a:hover{ color:var(--accent); }
+nav a:hover{
+  color:var(--accent);
+}
 
 .hero{
   padding:70px 6vw 90px;
@@ -108,7 +110,6 @@ nav a:hover{ color:var(--accent); }
   font-size:.55em;
   font-style:italic;
   font-weight:500;
-  letter-spacing:-.03em;
 }
 
 .hero-buttons{
@@ -168,38 +169,16 @@ nav a:hover{ color:var(--accent); }
   gap:42px;
 }
 
-.book-slider{
-  position:relative;
-  border-radius:22px;
-}
-
-.slides{
-  display:flex;
-  width:200%;
-  overflow:hidden;
-  border-radius:22px;
-  transition:transform .45s ease;
-}
-
-.book-slider.show-translation .slides{
-  transform:translateX(-50%);
-}
-
-.slide{
-  width:50%;
-  flex:0 0 50%;
-  text-decoration:none;
-  color:inherit;
-}
-
-.book{
+.book,
+.book-card{
   text-decoration:none;
   color:inherit;
   display:block;
   transition:transform .2s ease;
 }
 
-.book:hover{
+.book:hover,
+.book-card:hover{
   transform:translateY(-7px);
 }
 
@@ -214,44 +193,81 @@ nav a:hover{ color:var(--accent); }
 }
 
 .book h3,
-.slide h3{
+.book-card h3{
   margin:18px 0 6px;
   font-size:1.35rem;
 }
 
 .book p,
-.slide p{
+.book-card p{
   color:#666;
   line-height:1.6;
   margin:0;
 }
 
+.slider{
+  position:relative;
+}
+
+.slider-window{
+  overflow:hidden;
+  border-radius:22px;
+}
+
+.slider-track{
+  display:flex;
+  transition:transform .45s ease;
+}
+
+.slider.show-translation .slider-track{
+  transform:translateX(-100%);
+}
+
+.slider-slide{
+  flex:0 0 100%;
+  text-decoration:none;
+  color:inherit;
+}
+
 .slide-arrow{
   position:absolute;
   top:38%;
-  right:6px;
+  right:10px;
   transform:translateY(-50%);
+
   border:none;
-  background:none;
-  color:#c7c7c7;
-  font-size:2.4rem;
+  background:rgba(255,255,255,.45);
+
+  width:34px;
+  height:52px;
+
+  color:rgba(90,90,90,.55);
+  font-size:2rem;
   font-weight:300;
+  line-height:1;
+
   cursor:pointer;
   opacity:0;
-  transition:opacity .2s ease, color .2s ease;
-  z-index:4;
-  line-height:1;
+  z-index:5;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:18px;
+  transition:opacity .2s ease, background .2s ease, color .2s ease;
 }
 
-.book-slider:hover .slide-arrow{
+.slider:hover .slide-arrow{
   opacity:1;
 }
 
 .slide-arrow:hover{
-  color:#999;
+  background:rgba(255,255,255,.8);
+  color:rgba(70,70,70,.8);
 }
 
-.book-slider.show-translation .slide-arrow{
+.slider.show-translation .slide-arrow{
   transform:translateY(-50%) rotate(180deg);
 }
 
@@ -397,19 +413,6 @@ nav a:hover{ color:var(--accent); }
     <a class="button instagram"
        href="https://www.instagram.com/m_acky/"
        target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg"
-           width="18"
-           height="18"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           stroke-width="2"
-           stroke-linecap="round"
-           stroke-linejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <path d="M16 11.37a4 4 0 1 1-7.75 1.27 4 4 0 0 1 7.75-1.27z"></path>
-        <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-      </svg>
       Seguimi
     </a>
   </div>
@@ -421,30 +424,32 @@ nav a:hover{ color:var(--accent); }
   <p class="intro">
     Clicca su una copertina per aprire la scheda del libro.
     Quando esiste una traduzione, passa il mouse sulla copertina:
-    comparirà una freccina per far scorrere l’edizione estera.
+    comparirà un piccolo triangolino per far scorrere l’edizione estera.
   </p>
 
   <div class="books">
 
-    <div class="book-slider">
-      <div class="slides">
+    <div class="book-card slider">
+      <div class="slider-window">
+        <div class="slider-track">
 
-        <a class="slide" href="mi-manchi-una-balena.html">
-          <img class="cover" src="images/mi-manchi-una-balena.png" alt="Mi manchi una balena">
-          <h3>Mi manchi una balena</h3>
-          <p>Lapis Edizioni · 2024</p>
-        </a>
+          <a class="slider-slide" href="mi-manchi-una-balena.html">
+            <img class="cover" src="images/mi-manchi-una-balena.png" alt="Mi manchi una balena">
+            <h3>Mi manchi una balena</h3>
+            <p>Lapis Edizioni · 2024</p>
+          </a>
 
-        <a class="slide" href="je-taime-gros-comme-une-baleine.html">
-          <img class="cover" src="images/je-taime-gros-comme-une-baleine.png" alt="Je t'aime gros comme une baleine">
-          <h3>Je t’aime gros comme une baleine</h3>
-          <p>Courtes et Longues · 2026</p>
-        </a>
+          <a class="slider-slide" href="je-taime-gros-comme-une-baleine.html">
+            <img class="cover" src="images/je-taime-gros-comme-une-baleine.png" alt="Je t'aime gros comme une baleine">
+            <h3>Je t’aime gros comme une baleine</h3>
+            <p>Courtes et Longues · 2026</p>
+          </a>
 
+        </div>
       </div>
 
       <button class="slide-arrow"
-              onclick="nextSlide(this)"
+              onclick="nextSlide(event, this)"
               aria-label="Mostra traduzione">
         &gt;
       </button>
@@ -456,25 +461,27 @@ nav a:hover{ color:var(--accent); }
       <p>Misteris Pinkmanas · 2025</p>
     </a>
 
-    <div class="book-slider">
-      <div class="slides">
+    <div class="book-card slider">
+      <div class="slider-window">
+        <div class="slider-track">
 
-        <a class="slide" href="super-fluo.html">
-          <img class="cover" src="images/superfluo.png" alt="Super Fluo">
-          <h3>Super Fluo</h3>
-          <p>Corraini Edizioni · 2026</p>
-        </a>
+          <a class="slider-slide" href="super-fluo.html">
+            <img class="cover" src="images/superfluo.png" alt="Super Fluo">
+            <h3>Super Fluo</h3>
+            <p>Corraini Edizioni · 2026</p>
+          </a>
 
-        <a class="slide" href="super-duper.html">
-          <img class="cover" src="images/super-duper.png" alt="Super-Duper">
-          <h3>Super-Duper</h3>
-          <p>Corraini Edizioni · 2026</p>
-        </a>
+          <a class="slider-slide" href="super-duper.html">
+            <img class="cover" src="images/super-duper.png" alt="Super-Duper">
+            <h3>Super-Duper</h3>
+            <p>Corraini Edizioni · 2026</p>
+          </a>
 
+        </div>
       </div>
 
       <button class="slide-arrow"
-              onclick="nextSlide(this)"
+              onclick="nextSlide(event, this)"
               aria-label="Mostra traduzione">
         &gt;
       </button>
@@ -608,8 +615,11 @@ nav a:hover{ color:var(--accent); }
 </footer>
 
 <script>
-function nextSlide(button){
-  const slider = button.closest(".book-slider");
+function nextSlide(event, button){
+  event.preventDefault();
+  event.stopPropagation();
+
+  const slider = button.closest(".slider");
   slider.classList.toggle("show-translation");
 }
 </script>
