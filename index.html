@@ -9,312 +9,536 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
   --bg:#fff9f1;
   --paper:#ffffff;
   --text:#2b2b2b;
   --accent:#ef6c8f;
-  --accent2:#5aa6d1;
+  --blue:#5aa6d1;
+  --yellow:#ffd966;
+  --mint:#bcefd5;
+  --lavender:#dcccf6;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
-html{
-  scroll-behavior:smooth;
-}
+html{ scroll-behavior:smooth; }
 
 body{
   margin:0;
   background:var(--bg);
   color:var(--text);
-  font-family:'Inter',sans-serif;
+  font-family:'Nunito Sans',sans-serif;
 }
 
 header{
-  padding:30px 6vw;
+  padding:28px 6vw;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  position:sticky;
+  top:0;
+  background:rgba(255,249,241,.92);
+  backdrop-filter:blur(8px);
+  z-index:10;
 }
 
 .logo{
-  font-family:'DM Serif Display',serif;
+  font-family:'Bricolage Grotesque',sans-serif;
   font-size:2rem;
+  font-weight:700;
   text-decoration:none;
   color:var(--text);
 }
 
 nav a{
-  margin-left:25px;
+  margin-left:22px;
   text-decoration:none;
   color:var(--text);
-  font-weight:600;
+  font-weight:700;
 }
 
-nav a:hover{
-  color:var(--accent);
-}
+nav a:hover{ color:var(--accent); }
 
 .hero{
-  padding:60px 6vw 80px;
+  padding:70px 6vw 90px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  background:var(--yellow);
+  border-radius:50%;
+  right:8vw;
+  top:30px;
+  opacity:.55;
+  z-index:-1;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  background:var(--mint);
+  border-radius:45% 55% 60% 40%;
+  left:4vw;
+  bottom:20px;
+  opacity:.65;
+  z-index:-1;
 }
 
 .hero h1{
-  font-family:'DM Serif Display',serif;
-  font-size:clamp(4rem,10vw,8rem);
-  line-height:.9;
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:clamp(3.8rem,9vw,8rem);
+  line-height:.92;
   margin:0;
+  letter-spacing:-.04em;
 }
 
 .hero p{
-  max-width:700px;
+  max-width:720px;
   margin-top:30px;
-  font-size:1.3rem;
+  font-size:1.35rem;
   line-height:1.7;
 }
 
 .button{
   display:inline-block;
-  margin-top:25px;
+  margin-top:24px;
   padding:14px 24px;
   border-radius:999px;
   background:var(--accent);
   color:white;
   text-decoration:none;
-  font-weight:600;
+  font-weight:700;
+}
+
+.button.secondary{
+  background:var(--blue);
+  margin-left:10px;
+}
+
+.section{
+  padding:90px 6vw;
+}
+
+.section.white{
+  background:white;
 }
 
 .section-title{
-  font-family:'DM Serif Display',serif;
-  font-size:3rem;
-  margin-bottom:40px;
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:clamp(2.4rem,6vw,4rem);
+  margin:0 0 40px;
+  letter-spacing:-.03em;
 }
 
-.books-section{
-  padding:0 6vw 100px;
+.intro{
+  max-width:780px;
+  font-size:1.25rem;
+  line-height:1.8;
+  margin-bottom:42px;
 }
 
 .books{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:42px;
 }
 
 .book{
   text-decoration:none;
   color:inherit;
+  display:block;
+  transition:transform .2s ease;
 }
 
 .book:hover{
-  transform:translateY(-6px);
+  transform:translateY(-7px);
 }
 
 .cover{
   width:100%;
   aspect-ratio:3/4;
   object-fit:cover;
-  border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
-
-.double-cover{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-.small-cover{
-  width:100%;
-  aspect-ratio:3/4;
-  object-fit:cover;
-  border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,.15);
+  border-radius:22px;
+  box-shadow:0 15px 35px rgba(0,0,0,.16);
+  background:white;
 }
 
 .book h3{
-  margin:18px 0 8px;
-  font-size:1.3rem;
+  margin:18px 0 6px;
+  font-size:1.35rem;
 }
 
 .book p{
   color:#666;
   line-height:1.6;
+  margin:0;
 }
 
-.about{
-  padding:100px 6vw;
+.foreign-wrap{
+  margin-top:80px;
+}
+
+.foreign-title{
+  font-size:2rem;
+  margin:0 0 24px;
+  color:var(--blue);
+}
+
+.foreign-books{
+  display:flex;
+  gap:28px;
+  overflow-x:auto;
+  padding:4px 0 26px;
+  scroll-snap-type:x proximity;
+}
+
+.foreign-books::-webkit-scrollbar{
+  height:10px;
+}
+
+.foreign-books::-webkit-scrollbar-thumb{
+  background:var(--lavender);
+  border-radius:999px;
+}
+
+.foreign-book{
+  min-width:220px;
+  max-width:220px;
+  text-decoration:none;
+  color:inherit;
+  scroll-snap-align:start;
+}
+
+.foreign-book img{
+  width:220px;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,.14);
+}
+
+.foreign-book h3{
+  margin:14px 0 5px;
+  font-size:1.1rem;
+}
+
+.foreign-book p{
+  margin:0;
+  color:#666;
+  line-height:1.5;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+}
+
+.card{
   background:white;
+  border-radius:24px;
+  padding:28px;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
 }
 
-.about-content{
-  max-width:800px;
+.card.yellow{ background:#fff4ba; }
+.card.mint{ background:#dff8eb; }
+.card.lavender{ background:#eee7ff; }
+
+.card h3{
+  margin-top:0;
+  font-size:1.4rem;
 }
 
-.about p{
-  font-size:1.2rem;
-  line-height:1.9;
+.card p{
+  line-height:1.7;
+}
+
+.lab-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+}
+
+.lab{
+  background:var(--paper);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+}
+
+.lab img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  background:var(--lavender);
+}
+
+.lab-text{
+  padding:22px;
+}
+
+.lab-text h3{
+  margin-top:0;
+}
+
+.contact-box{
+  background:var(--text);
+  color:white;
+  border-radius:30px;
+  padding:38px;
+  max-width:900px;
+}
+
+.contact-box a{
+  color:white;
+  font-weight:700;
 }
 
 .footer{
-  padding:60px 6vw;
+  padding:50px 6vw;
   text-align:center;
+  color:#666;
 }
 
 .footer a{
   color:var(--accent);
   text-decoration:none;
+  font-weight:700;
 }
 
-@media(max-width:700px){
-
+@media(max-width:760px){
   header{
     flex-direction:column;
-    gap:15px;
+    align-items:flex-start;
+    gap:16px;
   }
 
   nav{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
+    gap:12px;
   }
 
-}
+  nav a{
+    margin-left:0;
+  }
 
+  .button.secondary{
+    margin-left:0;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
+  <a class="logo" href="#">Marica Rocca</a>
 
-<a class="logo" href="#">
-Marica Rocca
-</a>
-
-<nav>
-  <a href="#libri">Libri</a>
-  <a href="appunti.html">Appunti</a>
-  <a href="#about">About</a>
-  <a href="https://www.instagram.com/m_acky/" target="_blank">Instagram</a>
-</nav>
-
+  <nav>
+    <a href="#libri">Libri</a>
+    <a href="#laboratori">Laboratori</a>
+    <a href="appunti.html">Appunti</a>
+    <a href="#insegnanti">Insegnanti</a>
+    <a href="#contatti">Contatti</a>
+    <a href="https://www.instagram.com/m_acky/" target="_blank">Instagram</a>
+  </nav>
 </header>
 
+<main>
+
 <section class="hero">
+  <h1>Scrivo libri<br>per bambini<br><em>ma sono per tutti.</em></h1>
 
-<h1>
-Scrivo libri<br>
-per bambini.
-</h1>
+  <p>
+    Storie illustrate con balene, rinoceronti, bambini invisibili,
+    supereroi improbabili e piccoli modi di volersi bene.
+  </p>
 
-<p>
-Storie illustrate con balene, rinoceronti, bambini invisibili,
-supereroi improbabili e piccoli modi di volersi bene.
-</p>
-
-<a class="button"
-href="https://www.instagram.com/m_acky/"
-target="_blank">
-Seguimi su Instagram
-</a>
-
+  <a class="button" href="#libri">Guarda i libri</a>
+  <a class="button secondary" href="#contatti">Invitami</a>
 </section>
 
-<section class="books-section" id="libri">
+<section class="section" id="libri">
+  <h2 class="section-title">I miei libri</h2>
 
-<h2 class="section-title">Libri</h2>
+  <p class="intro">
+    Clicca su una copertina per aprire la scheda del libro, con descrizione,
+    link all’editore, link d’acquisto e, quando ci saranno, materiali di backstage.
+  </p>
 
-<div class="books">
+  <div class="books">
 
-<a class="book"
-href="https://www.edizionilapis.it/libro/9788878749702-mi-manchi-una-balena"
-target="_blank">
-<img class="cover" src="images/mi-manchi-una-balena.png" alt="Mi manchi una balena">
-<h3>Mi manchi una balena</h3>
-<p>Lapis Edizioni · 2024</p>
-</a>
+    <a class="book" href="mi-manchi-una-balena.html">
+      <img class="cover" src="images/mi-manchi-una-balena.png" alt="Mi manchi una balena">
+      <h3>Mi manchi una balena</h3>
+      <p>Lapis Edizioni · 2024</p>
+    </a>
 
-<a class="book"
-href="https://www.cleditions.com/jeunesse/albums/je-t-aime-gros-comme-une-baleine.html"
-target="_blank">
-<img class="cover" src="images/je-taime-gros-comme-une-baleine.png" alt="Je t'aime gros comme une baleine">
-<h3>Je t’aime gros comme une baleine</h3>
-<p>Courtes et Longues · 2026</p>
-</a>
+    <a class="book" href="lukas-nematomas-berniukas.html">
+      <img class="cover" src="images/lukas-nematomas-berniukas.png" alt="Lukas, nematomas berniukas">
+      <h3>Lukas, nematomas berniukas</h3>
+      <p>Misteris Pinkmanas · 2025</p>
+    </a>
 
-<a class="book"
-href="https://pinkmanas.com/produktas/lukas-nematomas-berniukas-as-invisible-as-lukas/"
-target="_blank">
-<img class="cover" src="images/lukas-nematomas-berniukas.png" alt="Lukas, nematomas berniukas">
-<h3>Lukas, nematomas berniukas</h3>
-<p>Misteris Pinkmanas · 2025</p>
-</a>
+    <a class="book" href="super-fluo.html">
+      <img class="cover" src="images/superfluo.png" alt="Super Fluo">
+      <h3>Super Fluo</h3>
+      <p>Corraini Edizioni · 2026</p>
+    </a>
 
-<a class="book"
-href="https://corraini.com/it/super-fluo.html"
-target="_blank">
-<img class="cover" src="images/superfluo.png" alt="Super Fluo">
-<h3>Super Fluo</h3>
-<p>Corraini Edizioni · 2026</p>
-</a>
+  </div>
 
-<a class="book"
-href="https://corraini.com/it/super-fluo.html"
-target="_blank">
-<img class="cover" src="images/super-duper.png" alt="Super-Duper">
-<h3>Super-Duper</h3>
-<p>Corraini Edizioni · 2026</p>
-</a>
+  <div class="foreign-wrap">
+    <h3 class="foreign-title">Edizioni estere →</h3>
 
-</div>
+    <div class="foreign-books">
 
+      <a class="foreign-book" href="je-taime-gros-comme-une-baleine.html">
+        <img src="images/je-taime-gros-comme-une-baleine.png" alt="Je t'aime gros comme une baleine">
+        <h3>Je t’aime gros comme une baleine</h3>
+        <p>Courtes et Longues · 2026</p>
+      </a>
+
+      <a class="foreign-book" href="super-duper.html">
+        <img src="images/super-duper.png" alt="Super-Duper">
+        <h3>Super-Duper</h3>
+        <p>Corraini Edizioni · 2026</p>
+      </a>
+
+    </div>
+  </div>
 </section>
 
-<section class="about" id="about">
+<section class="section white" id="laboratori">
+  <h2 class="section-title">Laboratori e incontri</h2>
 
-<div class="about-content">
+  <p class="intro">
+    Incontro scuole, biblioteche, librerie e festival con laboratori
+    intorno ai libri, alle emozioni, ai personaggi e alle storie che nascono
+    dalle cose piccole.
+  </p>
 
-<h2 class="section-title">About</h2>
+  <div class="lab-grid">
 
-<p>
-Sono Marica Rocca, autrice di libri per bambini.
-Scrivo storie illustrate che parlano di amicizia,
-cura, mancanza, invisibilità e piccoli superpoteri quotidiani.
-</p>
+    <article class="lab">
+      <img src="images/laboratorio-1.jpg" alt="Laboratorio con bambini">
+      <div class="lab-text">
+        <h3>Titolo laboratorio</h3>
+        <p>Qui puoi raccontare dove si è svolto, con chi, e che cosa avete fatto.</p>
+      </div>
+    </article>
 
-<p>
-Nei miei libri ci sono animali enormi,
-uccellini minuscoli, bambini che cercano il proprio posto
-e supereroi che forse non sanno fare tutto,
-ma sanno voler bene moltissimo.
-</p>
+    <article class="lab">
+      <img src="images/laboratorio-2.jpg" alt="Laboratorio creativo">
+      <div class="lab-text">
+        <h3>Titolo laboratorio</h3>
+        <p>Spazio per un altro laboratorio, una lettura o un incontro in libreria.</p>
+      </div>
+    </article>
 
-</div>
+    <article class="lab">
+      <img src="images/laboratorio-3.jpg" alt="Incontro con autrice">
+      <div class="lab-text">
+        <h3>Titolo laboratorio</h3>
+        <p>Puoi aggiungere foto e testi ogni volta che vuoi aggiornare il sito.</p>
+      </div>
+    </article>
 
+  </div>
 </section>
+
+<section class="section" id="insegnanti">
+  <h2 class="section-title">Per insegnanti</h2>
+
+  <div class="cards">
+    <div class="card yellow">
+      <h3>In classe</h3>
+      <p>
+        I miei libri possono diventare punti di partenza per parlare di emozioni,
+        cura, amicizia, invisibilità, coraggio e piccoli superpoteri quotidiani.
+      </p>
+    </div>
+
+    <div class="card mint">
+      <h3>Materiali</h3>
+      <p>
+        Qui potrai aggiungere schede, proposte di attività, PDF scaricabili
+        o suggerimenti di lettura.
+      </p>
+    </div>
+
+    <div class="card lavender">
+      <h3>Richieste</h3>
+      <p>
+        Per incontri con scuole, biblioteche e classi puoi usare il modulo
+        nella sezione contatti.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section white" id="about">
+  <h2 class="section-title">About</h2>
+
+  <p class="intro">
+    Sono Marica Rocca, autrice di libri per bambini.
+    Scrivo storie illustrate che parlano di amicizia, cura, mancanza,
+    invisibilità e piccoli superpoteri quotidiani.
+  </p>
+
+  <p class="intro">
+    Nei miei libri ci sono animali enormi, uccellini minuscoli,
+    bambini che cercano il proprio posto e supereroi che forse non sanno fare tutto,
+    ma sanno voler bene moltissimo.
+  </p>
+</section>
+
+<section class="section" id="contatti">
+  <h2 class="section-title">Contatti</h2>
+
+  <div class="contact-box">
+    <h3>Librerie, scuole, festival, biblioteche</h3>
+
+    <p>
+      Per incontri, letture, laboratori o richieste speciali puoi scrivermi
+      via email oppure compilare un modulo.
+    </p>
+
+    <p>
+      Email:
+      <a href="mailto:marica.rocca91@gmail.com">marica.rocca91@gmail.com</a>
+    </p>
+
+    <p>
+      Modulo richieste:
+      <a href="INSERISCI-QUI-LINK-GOOGLE-FORM" target="_blank">
+        compila il form
+      </a>
+    </p>
+  </div>
+</section>
+
+</main>
 
 <footer class="footer">
-
-<p>
-📧
-<a href="mailto:marica.rocca91@gmail.com">
-marica.rocca91@gmail.com
-</a>
-</p>
-
-<p>
-📷
-<a href="https://www.instagram.com/m_acky/" target="_blank">
-@m_acky
-</a>
-</p>
-
+  <p>
+    © Marica Rocca ·
+    <a href="mailto:marica.rocca91@gmail.com">email</a> ·
+    <a href="https://www.instagram.com/m_acky/" target="_blank">@m_acky</a>
+  </p>
 </footer>
 
 </body>
