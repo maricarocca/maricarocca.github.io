@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi manchi una balena | Marica Rocca</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#fff9f1;
+  --paper:#ffffff;
+  --text:#2b2b2b;
+  --accent:#ef6c8f;
+  --blue:#5aa6d1;
+  --yellow:#ffd966;
+  --mint:#bcefd5;
+  --lavender:#dcccf6;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Nunito Sans',sans-serif;
+}
+
+header{
+  padding:28px 6vw;
+}
+
+header a{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:700;
+}
+
+main{
+  padding:40px 6vw 90px;
+}
+
+.book-hero{
+  display:grid;
+  grid-template-columns:minmax(260px,420px) 1fr;
+  gap:60px;
+  align-items:start;
+}
+
+.cover{
+  width:100%;
+  border-radius:24px;
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+
+.kicker{
+  color:var(--accent);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.85rem;
+}
+
+h1{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:clamp(3rem,7vw,6rem);
+  line-height:.92;
+  margin:10px 0 24px;
+  letter-spacing:-.04em;
+}
+
+.description{
+  font-size:1.25rem;
+  line-height:1.8;
+  max-width:720px;
+}
+
+.meta{
+  margin:30px 0;
+  display:grid;
+  gap:10px;
+  font-size:1.05rem;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+
+.button{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:999px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+}
+
+.button.blue{
+  background:var(--blue);
+}
+
+.section{
+  margin-top:90px;
+}
+
+.section h2{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:2.7rem;
+  margin-bottom:24px;
+}
+
+.box{
+  background:white;
+  border-radius:26px;
+  padding:32px;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+  max-width:900px;
+}
+
+.box p{
+  font-size:1.15rem;
+  line-height:1.8;
+}
+
+.backstage-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+}
+
+.backstage-card{
+  background:white;
+  border-radius:24px;
+  padding:22px;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+}
+
+.backstage-card img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:18px;
+  background:var(--lavender);
+}
+
+footer{
+  padding:50px 6vw;
+  text-align:center;
+  color:#666;
+}
+
+footer a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:700;
+}
+
+@media(max-width:800px){
+  .book-hero{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">← Torna ai libri</a>
+</header>
+
+<main>
+
+<section class="book-hero">
+
+  <div>
+    <img class="cover" src="images/mi-manchi-una-balena.png" alt="Mi manchi una balena">
+  </div>
+
+  <div>
+    <div class="kicker">Albo illustrato</div>
+
+    <h1>Mi manchi una balena</h1>
+
+    <p class="description">
+      Una storia tenera su un rinoceronte, una bufaga e tutti i modi
+      in cui si può dire: “mi manchi”.
+    </p>
+
+    <div class="meta">
+      <div><strong>Autrice:</strong> Marica Rocca</div>
+      <div><strong>Illustrazioni:</strong> Arianna Alessi</div>
+      <div><strong>Editore:</strong> Lapis Edizioni</div>
+      <div><strong>Anno:</strong> 2024</div>
+      <div><strong>Età:</strong> dai 3 anni</div>
+    </div>
+
+    <div class="buttons">
+      <a class="button" href="https://www.edizionilapis.it/libro/9788878749702-mi-manchi-una-balena" target="_blank">
+        Sito editore
+      </a>
+
+      <a class="button blue" href="INSERISCI-LINK-AMAZON" target="_blank">
+        Amazon
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<section class="section">
+  <h2>Di cosa parla</h2>
+
+  <div class="box">
+    <p>
+      Qui puoi inserire una descrizione più personale del libro:
+      com'è nata la storia, che cosa racconta, quali emozioni attraversa
+      e perché ti è cara.
+    </p>
+
+    <p>
+      Puoi anche aggiungere una frase breve, una citazione dal testo,
+      oppure un piccolo dietro le quinte.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Backstage</h2>
+
+  <p class="description">
+    Bozzetti, appunti, prime idee, foto dal tavolo di lavoro.
+    Questa sezione puoi riempirla un po' alla volta.
+  </p>
+
+  <div class="backstage-grid">
+
+    <div class="backstage-card">
+      <img src="images/balena-backstage-1.jpg" alt="Backstage Mi manchi una balena">
+      <h3>Primi appunti</h3>
+      <p>Qui puoi raccontare un dettaglio sulla nascita del libro.</p>
+    </div>
+
+    <div class="backstage-card">
+      <img src="images/balena-backstage-2.jpg" alt="Bozzetto Mi manchi una balena">
+      <h3>Bozzetti</h3>
+      <p>Spazio per disegni, prove, materiali o foto del processo.</p>
+    </div>
+
+    <div class="backstage-card">
+      <img src="images/balena-backstage-3.jpg" alt="Dettagli Mi manchi una balena">
+      <h3>Cose rimaste fuori</h3>
+      <p>Un posto per curiosità, versioni alternative o piccole note.</p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    © Marica Rocca ·
+    <a href="mailto:marica.rocca91@gmail.com">marica.rocca91@gmail.com</a> ·
+    <a href="https://www.instagram.com/m_acky/" target="_blank">@m_acky</a>
+  </p>
+</footer>
+
+</body>
+</html>
