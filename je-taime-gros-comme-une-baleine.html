@@ -1,26 +1,24 @@
-<!-- FILE: je-taime-gros-comme-une-baleine.html -->
-
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Je t’aime gros comme une baleine | Marica Rocca</title>
+
+<title>Je t'aime gros comme une baleine | Marica Rocca</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --bg:#fff9f1;
   --paper:#ffffff;
   --text:#2b2b2b;
   --accent:#ef6c8f;
   --blue:#5aa6d1;
-  --yellow:#ffd966;
-  --mint:#bcefd5;
-  --lavender:#dcccf6;
 }
 
 *{ box-sizing:border-box; }
@@ -32,7 +30,9 @@ body{
   font-family:'Nunito Sans',sans-serif;
 }
 
-header{ padding:28px 6vw; }
+header{
+  padding:28px 6vw;
+}
 
 header a{
   color:var(--text);
@@ -40,7 +40,9 @@ header a{
   font-weight:700;
 }
 
-main{ padding:40px 6vw 90px; }
+main{
+  padding:40px 6vw 90px;
+}
 
 .book-hero{
   display:grid;
@@ -68,12 +70,12 @@ h1{
   font-size:clamp(3rem,7vw,6rem);
   line-height:.92;
   margin:10px 0 24px;
-  letter-spacing:-.04em;
 }
 
 .description{
-  font-size:1.25rem;
-  line-height:1.8;
+  font-size:1.1rem;
+  line-height:1.9;
+  text-align:justify;
   max-width:720px;
 }
 
@@ -101,26 +103,15 @@ h1{
   font-weight:800;
 }
 
-.button.blue{ background:var(--blue); }
-
-.section{ margin-top:90px; }
-
-.section h2{
-  font-family:'Bricolage Grotesque',sans-serif;
-  font-size:2.7rem;
-  margin-bottom:24px;
+.button.blue{
+  background:var(--blue);
 }
 
-.box{
+.note{
+  margin-top:30px;
+  padding:20px;
   background:white;
-  border-radius:26px;
-  padding:32px;
-  box-shadow:0 10px 28px rgba(0,0,0,.08);
-  max-width:900px;
-}
-
-.box p{
-  font-size:1.15rem;
+  border-radius:20px;
   line-height:1.8;
 }
 
@@ -130,15 +121,12 @@ footer{
   color:#666;
 }
 
-footer a{
-  color:var(--accent);
-  text-decoration:none;
-  font-weight:700;
+@media(max-width:800px){
+  .book-hero{
+    grid-template-columns:1fr;
+  }
 }
 
-@media(max-width:800px){
-  .book-hero{ grid-template-columns:1fr; }
-}
 </style>
 </head>
 
@@ -153,50 +141,54 @@ footer a{
 <section class="book-hero">
 
   <div>
-    <img class="cover" src="images/je-taime-gros-comme-une-baleine.png" alt="Je t’aime gros comme une baleine">
+    <img class="cover"
+         src="images/je-taime-gros-comme-une-baleine.png"
+         alt="Je t'aime gros comme une baleine">
   </div>
 
   <div>
-    <div class="kicker">Edizione francese</div>
 
-    <h1>Je t’aime gros comme une baleine</h1>
+    <div class="kicker">Édition française</div>
+
+    <h1>Je t'aime gros comme une baleine</h1>
 
     <p class="description">
-      L’edizione francese di <em>Mi manchi una balena</em>.
-      Una storia tenera su un rinoceronte, una bufaga e tutti i modi
-      in cui si può dire: “mi manchi”.
-    </p>
+  Un rhinocéros et un petit oiseau au bec rouge vivent ensemble,
+  très proches l'un de l'autre, mais pas toujours au même rythme.
+
+  Quand le rhinocéros est occupé, distrait ou lointain, son ami ressent
+  le besoin de lui dire combien il compte pour lui.
+
+  Fourmi, chat, girafe ou baleine : selon les jours, les animaux deviennent
+  une façon tendre et drôle de mesurer l'amour, l'absence et l'envie d'être ensemble.
+</p>
 
     <div class="meta">
-      <div><strong>Autrice:</strong> Marica Rocca</div>
-      <div><strong>Illustrazioni:</strong> Arianna Alessi</div>
-      <div><strong>Editore:</strong> Courtes et Longues</div>
-      <div><strong>Anno:</strong> 2026</div>
-      <div><strong>Libro originale:</strong> Mi manchi una balena</div>
+      <div><strong>Texte :</strong> Marica Rocca</div>
+      <div><strong>Illustrations :</strong> Arianna Alessi</div>
+      <div><strong>Éditeur :</strong> Courtes et Longues</div>
+      <div><strong>Année :</strong> 2026</div>
+      <div><strong>Langue :</strong> Français</div>
     </div>
 
     <div class="buttons">
-      <a class="button" href="https://www.cleditions.com/jeunesse/albums/je-t-aime-gros-comme-une-baleine.html" target="_blank">
-        Sito editore
+
+      <a class="button"
+         href="https://www.cleditions.com/jeunesse/albums/je-t-aime-gros-comme-une-baleine.html"
+         target="_blank">
+        Site éditeur
       </a>
 
-      <a class="button blue" href="INSERISCI-LINK-AMAZON" target="_blank">
-        Amazon
-      </a>
     </div>
+
+    <div class="note">
+  Édition française de l'album illustré <em>Mi manchi una balena</em>,
+  publié en Italie par Lapis Edizioni.
+</div>
+    
+
   </div>
 
-</section>
-
-<section class="section">
-  <h2>Di cosa parla</h2>
-
-  <div class="box">
-    <p>
-      Qui puoi inserire una descrizione più personale dell’edizione francese,
-      oppure spiegare il rapporto con il libro originale.
-    </p>
-  </div>
 </section>
 
 </main>
@@ -204,10 +196,10 @@ footer a{
 <footer>
   <p>
     © Marica Rocca ·
-    <a href="mailto:marica.rocca91@gmail.com">marica.rocca91@gmail.com</a> ·
     <a href="https://www.instagram.com/m_acky/" target="_blank">@m_acky</a>
   </p>
 </footer>
 
 </body>
 </html>
+
