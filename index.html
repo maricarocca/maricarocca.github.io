@@ -254,27 +254,36 @@ nav a:hover{
   right:10px;
   transform:translateY(-50%);
 
+  width:36px;
+  height:36px;
+
   border:none;
-  background:rgba(255,255,255,.45);
+  border-radius:50%;
 
-  width:34px;
-  height:52px;
-
-  color:rgba(90,90,90,.55);
-  font-size:2rem;
-  font-weight:300;
-  line-height:1;
+  background:rgba(255,255,255,.55);
+  backdrop-filter:blur(4px);
 
   cursor:pointer;
   opacity:0;
+
+  transition:.2s ease;
+
   z-index:5;
+}
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.slide-arrow::before{
+  content:"›";
 
-  border-radius:18px;
-  transition:opacity .2s ease, background .2s ease, color .2s ease;
+  position:absolute;
+  top:50%;
+  left:50%;
+
+  transform:translate(-50%,-53%);
+
+  font-size:1.8rem;
+  font-weight:300;
+
+  color:rgba(70,70,70,.6);
 }
 
 .slider:hover .slide-arrow{
@@ -282,12 +291,11 @@ nav a:hover{
 }
 
 .slide-arrow:hover{
-  background:rgba(255,255,255,.8);
-  color:rgba(70,70,70,.8);
+  background:rgba(255,255,255,.85);
 }
 
-.slider.show-translation .slide-arrow{
-  transform:translateY(-50%) rotate(180deg);
+.slider.show-translation .slide-arrow::before{
+  content:"‹";
 }
 
 .foreign-note{
@@ -506,7 +514,7 @@ nav a:hover{
   <div class="hero-buttons">
     <a class="button" href="#libri">Guarda i libri</a>
 
-    <a class="button secondary" href="#insegnanti">Insegnanti</a>
+    <a class="button secondary" href="#invitami">Invitami</a>
 
     <a class="button instagram"
        href="https://www.instagram.com/m_acky/"
@@ -540,11 +548,10 @@ nav a:hover{
         </div>
       </div>
 
-      <button class="slide-arrow"
-              onclick="nextSlide(event, this)"
-              aria-label="Mostra traduzione">
-        &gt;
-      </button>
+     <button class="slide-arrow"
+        onclick="nextSlide(event, this)"
+        aria-label="Mostra traduzione">
+</button>
     </div>
 
     <a class="book" href="lukas-nematomas-berniukas.html">
@@ -598,10 +605,15 @@ nav a:hover{
 
       <div class="lab-text">
         <h3>Festival</h3>
-        <p>
-          Festival, letture e laboratori dedicati ai libri e all'immaginazione.
-          Tra le esperienze: LibrArte a Folignano e Librinfesta ad Alessandria e Uscire dal Guscio.
-        </p>
+      <p>
+Festival, letture e laboratori dedicati ai libri e all'immaginazione.
+</p>
+
+<p>
+<strong>LibrArte (Folignano)</strong> ·
+<strong>Librinfesta (Alessandria)</strong> ·
+<strong>Uscire dal Guscio (Bologna)</strong>
+</p>
       </div>
     </article>
 
@@ -610,10 +622,15 @@ nav a:hover{
 
       <div class="lab-text">
         <h3>Scuole</h3>
-        <p>
-          Incontri e laboratori che partono dagli albi illustrati per esplorare
-          emozioni, relazioni e immaginazione.
-        </p>
+       <p>
+Incontri e laboratori che partono dagli albi illustrati per esplorare
+emozioni, relazioni e immaginazione.
+</p>
+
+<p>
+Letture condivise, attività creative e percorsi costruiti insieme
+a insegnanti e classi di età diverse.
+</p>
      
       </div>
     </article>
@@ -683,7 +700,6 @@ nav a:hover{
 </p>
 
   <p class="intro">
-    Sono Marica Rocca, autrice di libri per bambini.
     Scrivo storie illustrate per chi continua a guardare il mondo con curiosità.
   </p>
 
