@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lukas, nematomas berniukas | Marica Rocca</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,9 +69,34 @@ h1{
 }
 
 .description{
-  font-size:1.25rem;
-  line-height:1.8;
+  font-size:1.12rem;
+  line-height:1.9;
   max-width:720px;
+  text-align:justify;
+}
+
+.opening-quote{
+  font-family:'Georgia',serif;
+  font-style:italic;
+  font-size:1.8rem;
+  line-height:1.5;
+  color:var(--accent);
+  margin-bottom:40px;
+  max-width:700px;
+}
+
+.box{
+  background:white;
+  border-radius:26px;
+  padding:32px;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+  max-width:900px;
+}
+
+.box p{
+  font-size:1.08rem;
+  line-height:1.9;
+  text-align:justify;
 }
 
 .meta{
@@ -107,19 +133,33 @@ h1{
   margin-bottom:24px;
 }
 
-.box{
-  background:white;
-  border-radius:26px;
-  padding:32px;
-  box-shadow:0 10px 28px rgba(0,0,0,.08);
-  max-width:900px;
+.backstage-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
 }
 
-.box p{
-  font-size:1.15rem;
+.backstage-card{
+  background:white;
+  border-radius:24px;
+  padding:22px;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+}
+
+.backstage-card img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:18px;
+  background:var(--lavender);
+}
+.note{
+  margin-top:30px;
+  padding:20px;
+  background:white;
+  border-radius:20px;
   line-height:1.8;
 }
-
 footer{
   padding:50px 6vw;
   text-align:center;
@@ -153,21 +193,31 @@ footer a{
   </div>
 
   <div>
-    <div class="kicker">Albo illustrato</div>
+    <div class="kicker">Albo illustrato bilingue</div>
 
     <h1>Lukas, nematomas berniukas</h1>
 
+    <div class="opening-quote">
+      A volte essere invisibili sembra un superpotere.  
+      Altre volte è solo un modo per non farsi notare
+    </div>
+
     <p class="description">
-      Una storia su un bambino che si sente invisibile
-      e sul bisogno di essere visti, accolti e riconosciuti.
+      Lukas è un bambino che sa sparire benissimo. Non nel senso magico,
+      o forse un po’ sì: è bravo a passare inosservato, a stare ai margini,
+      a non farsi vedere troppo.
+      Ma quando la sua invisibilità diventa improvvisamente qualcosa che tutti notano,
+      Lukas si ritrova al centro dell’attenzione e deve capire che cosa significa
+      davvero essere visto.
     </p>
 
     <div class="meta">
-      <div><strong>Autrice:</strong> Marica Rocca</div>
-      <div><strong>Con:</strong> Lucio Notarnicola</div>
+      <div><strong>Testo:</strong> Marica Rocca</div>
+      <div><strong>Illustrazioni:</strong> Lucio Notarnicola</div>
       <div><strong>Editore:</strong> Misteris Pinkmanas</div>
       <div><strong>Anno:</strong> 2025</div>
       <div><strong>Lingua:</strong> lituano / inglese</div>
+      <div><strong>Età:</strong> dai 6 anni</div>
     </div>
 
     <div class="buttons">
@@ -175,8 +225,8 @@ footer a{
         Sito editore
       </a>
 
-      <a class="button blue" href="INSERISCI-LINK-AMAZON" target="_blank">
-        Amazon
+      <a class="button blue" href="https://www.knygos.lt/lt/knygos/lukas--nematomas-berniukas--as-invisible-as-lukas/" target="_blank">
+        Knygos.lt
       </a>
     </div>
   </div>
@@ -187,24 +237,82 @@ footer a{
   <h2>Di cosa parla</h2>
 
   <div class="box">
+
     <p>
-      Qui puoi inserire una descrizione più personale del libro:
-      come è nato Lukas, che cosa racconta e perché ti è caro.
+      <em>Lukas, nematomas berniukas</em> parla di tutti quei momenti in cui ci 
+      si sente invisibili. Ma racconta anche il contrario:cosa succede quando, 
+      all'improvviso, tutti iniziano ad accorgersi di te?
     </p>
+
+    <p>
+      Lukas vorrebbe nascondersi, ma il suo talento nel passare inosservato
+      lo porta paradossalmente a essere notato da tutti. Da lì comincia una piccola
+      avventura sul bisogno di trovare il proprio posto, senza sparire e senza
+      doversi trasformare in qualcos'altro.
+    </p>
+
+    <p>
+      È una storia sul sentirsi invisibili, sull’amicizia e sul desiderio
+      di appartenere a un gruppo, anche quando non è facile farsi vedere
+      per quello che si è.
+    </p>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Backstage</h2>
+
+  <div class="backstage-grid">
+
+    <div class="backstage-card">
+      <img src="images/lukas-backstage-1.jpg" alt="Backstage Lukas">
+      <h3>Diventare invisibili</h3>
+      <p>
+        Lukas è nato dopo aver visto un disegno di Lucio Notarnicola:
+un bambino trasparente seduto su una panchina con una bombetta in testa.
+Mi sono chiesta perché si stesse nascondendo dietro un giornale.
+Da quella domanda è nata la storia.
+      </p>
+    </div>
+
+    <div class="backstage-card">
+      <img src="images/lukas-backstage-2.jpg" alt="Bozzetti Lukas">
+      <h3>Un libro bilingue</h3>
+      <p>
+        Pubblicato da una casa editrice lituana, il libro è stato pensato
+ in due lingue, lituano e inglese. Per attraversare confini e lettori diversi,
+pur parlando di qualcosa di universale.
+      </p>
+    </div>
+
+    <div class="backstage-card">
+      <img src="images/lukas-backstage-3.jpg" alt="Dettagli Lukas">
+      <h3>Cose rimaste fuori</h3>
+     <p>
+Prima che Lukas trovasse il suo nome definitivo,
+per molto tempo è stato Rolando.
+</p>
+    </div>
+
   </div>
 </section>
 
 </main>
 
+  <div class="note">
+  Per chi è curioso di scoprire come è nato il libro,
+  <a href="https://pinkmanas.com/ypatinga-dvikalbe-knyga-vaikams/" target="_blank">
+    qui c'è un'intervista a me e a Lucio.
+  </a>
+  (in lituano).
+</div>
 <footer>
   <p>
     © Marica Rocca ·
-    <a href="mailto:marica.rocca91@gmail.com">marica.rocca91@gmail.com</a> ·
     <a href="https://www.instagram.com/m_acky/" target="_blank">@m_acky</a>
   </p>
 </footer>
 
 </body>
 </html>
-
-
