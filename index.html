@@ -107,7 +107,7 @@ nav a:hover{
 .subtitle{
   display:block;
   margin-top:10px;
-  font-size:.55em;
+  font-size:.42em;
   font-style:italic;
   font-weight:500;
 }
@@ -325,9 +325,14 @@ nav a:hover{
   box-shadow:0 10px 28px rgba(0,0,0,.08);
 }
 
+  .lab{
+  height:auto;
+  align-self:start;
+}
+  
 .lab img{
   width:100%;
-  aspect-ratio:4/3;
+  height:280px;
   object-fit:cover;
   background:var(--lavender);
 }
@@ -336,8 +341,8 @@ nav a:hover{
   padding:22px;
 }
 
-.lab-text h3{
-  margin-top:0;
+.lab-text p:last-child{
+  margin-bottom:0;
 }
 
 .lab-gallery{
@@ -366,6 +371,39 @@ nav a:hover{
   font-weight:700;
 }
 
+  .contact-links{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  margin:40px 0;
+}
+
+.contact-links span{
+  display:block;
+  margin-bottom:8px;
+  font-size:.85rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  opacity:.7;
+}
+
+.contact-links a{
+  color:white;
+  text-decoration:none;
+  font-size:1.2rem;
+  font-weight:600;
+}
+
+.contact-links a:hover{
+  opacity:.8;
+}
+
+.contact-quote{
+  margin-top:40px;
+  font-style:italic;
+  opacity:.8;
+  font-size:1.1rem;
+}
 .footer{
   padding:50px 6vw;
   text-align:center;
@@ -573,7 +611,7 @@ nav a:hover{
       <h3>In classe</h3>
       <p>
         I miei libri possono diventare occasioni per osservare il mondo da prospettive diverse,
-fare domande, condividere esperienze e immaginare nuove possibilità insieme.
+        fare domande, condividere esperienze e immaginare nuove possibilità insieme.
       </p>
     </div>
 
@@ -593,12 +631,14 @@ fare domande, condividere esperienze e immaginare nuove possibilità insieme.
     Puoi inviarmi una richiesta per incontri, letture e laboratori.
   </p>
 
-  <p>
-    <a href="https://forms.gle/SMHG6GuNchYDf6Kh8"
-       target="_blank">
-      Compila il modulo →
-    </a>
-  </p>
+ <p>
+  <a class="button"
+     href="https://forms.gle/SMHG6GuNchYDf6Kh8"
+     target="_blank">
+     Compila il modulo
+  </a>
+</p>
+      
 </div>
   </div>
 </section>
@@ -614,15 +654,17 @@ fare domande, condividere esperienze e immaginare nuove possibilità insieme.
 
   <p class="intro">
     Sono Marica Rocca, autrice di libri per bambini.
-    Scrivo storie illustrate per l'infanzia e per chi continua a guardare il mondo con curiosità.
-    
+    Scrivo storie illustrate per chi continua a guardare il mondo con curiosità.
   </p>
 
   <p class="intro">
-    Nei miei racconti compaiono personaggi molto diversi tra loro, 
-    ma quasi tutti stanno cercando qualcosa: 
-    un amico, una risposta, il proprio posto nel mondo o semplicemente 
-    qualcuno con cui condividere il viaggio.
+    Mi interessano le cose che non sempre si vedono e i piccoli dettagli che spesso 
+    raccontano molto più delle grandi imprese.
+  </p>
+
+  <p class="intro">
+    Nei miei racconti compaiono personaggi molto diversi tra loro, ma quasi tutti stanno cercando qualcosa: 
+    un amico, una risposta, il proprio posto nel mondo o semplicemente qualcuno con cui condividere il viaggio.
    
   </p>
 </section>
@@ -635,14 +677,33 @@ fare domande, condividere esperienze e immaginare nuove possibilità insieme.
   <h3>Scrivimi</h3>
 
   <p>
-    Per collaborazioni, progetti editoriali o semplicemente per salutarmi:
+    Per collaborazioni, progetti editoriali 
+    o semplicemente per un saluto.
   </p>
 
-  <p>
-        <a href="mailto:marica.rocca91@gmail.com">
-      marica.rocca91@gmail.com
-    </a>
+  <div class="contact-links">
+
+    <div>
+      <span>Email</span>
+      <a href="mailto:marica.rocca91@gmail.com">
+        marica.rocca91@gmail.com
+      </a>
+    </div>
+
+    <div>
+      <span>Instagram</span>
+      <a href="https://www.instagram.com/m_acky/" target="_blank">
+        @m_acky
+      </a>
+    </div>
+
+  </div>
+
+  <p class="contact-quote">
+    Le storie iniziano spesso con una conversazione.
   </p>
+
+</div>
 
   <p>
         <a href="https://www.instagram.com/m_acky/" target="_blank">
