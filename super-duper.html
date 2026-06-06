@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Super-Duper | Marica Rocca</title>
+
+<title>Super-Duper. The totally useless superhero | Marica Rocca</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --bg:#fff9f1;
   --paper:#ffffff;
   --text:#2b2b2b;
   --accent:#ef6c8f;
   --blue:#5aa6d1;
-  --lavender:#dcccf6;
 }
 
 *{ box-sizing:border-box; }
@@ -28,7 +29,9 @@ body{
   font-family:'Nunito Sans',sans-serif;
 }
 
-header{ padding:28px 6vw; }
+header{
+  padding:28px 6vw;
+}
 
 header a{
   color:var(--text);
@@ -36,7 +39,9 @@ header a{
   font-weight:700;
 }
 
-main{ padding:40px 6vw 90px; }
+main{
+  padding:40px 6vw 90px;
+}
 
 .book-hero{
   display:grid;
@@ -64,12 +69,12 @@ h1{
   font-size:clamp(3rem,7vw,6rem);
   line-height:.92;
   margin:10px 0 24px;
-  letter-spacing:-.04em;
 }
 
 .description{
-  font-size:1.25rem;
-  line-height:1.8;
+  font-size:1.1rem;
+  line-height:1.9;
+  text-align:justify;
   max-width:720px;
 }
 
@@ -97,26 +102,15 @@ h1{
   font-weight:800;
 }
 
-.button.blue{ background:var(--blue); }
-
-.section{ margin-top:90px; }
-
-.section h2{
-  font-family:'Bricolage Grotesque',sans-serif;
-  font-size:2.7rem;
-  margin-bottom:24px;
+.button.blue{
+  background:var(--blue);
 }
 
-.box{
+.note{
+  margin-top:30px;
+  padding:20px;
   background:white;
-  border-radius:26px;
-  padding:32px;
-  box-shadow:0 10px 28px rgba(0,0,0,.08);
-  max-width:900px;
-}
-
-.box p{
-  font-size:1.15rem;
+  border-radius:20px;
   line-height:1.8;
 }
 
@@ -133,8 +127,11 @@ footer a{
 }
 
 @media(max-width:800px){
-  .book-hero{ grid-template-columns:1fr; }
+  .book-hero{
+    grid-template-columns:1fr;
+  }
 }
+
 </style>
 </head>
 
@@ -149,50 +146,63 @@ footer a{
 <section class="book-hero">
 
   <div>
-    <img class="cover" src="images/super-duper.png" alt="Super-Duper">
+    <img class="cover"
+         src="images/super-duper.png"
+         alt="Super-Duper">
   </div>
 
   <div>
-    <div class="kicker">Edizione inglese</div>
 
-    <h1>Super-Duper</h1>
+    <div class="kicker">English edition</div>
+
+    <h1>Super-Duper. The totally useless superhero</h1>
 
     <p class="description">
-      L’edizione inglese di <em>Super Fluo</em>.
-      Un supereroe apparentemente inutile, una Nonnina speciale
-      e una storia sui poteri quotidiani della cura.
+      Not all superheroes are the same.
+
+      Super-Duper is convinced he has extraordinary powers:
+      he can make flowers grow, move the Sun with yoga,
+      and even stop the rain after days of intense concentration.
+
+      But there is one person for whom he truly is a superhero:
+      his beloved Granny. For her, Super-Duper finds a way to make flowers bloom,
+      bring light into the day and, above all, make her laugh.
+
+      A gentle story about care, attention and the small everyday powers
+      that can make a real difference.
     </p>
 
     <div class="meta">
-      <div><strong>Autrice:</strong> Marica Rocca</div>
-      <div><strong>Con:</strong> Lucio Notarnicola</div>
-      <div><strong>Editore:</strong> Corraini Edizioni</div>
-      <div><strong>Anno:</strong> 2026</div>
-      <div><strong>Libro originale:</strong> Super Fluo</div>
+      <div><strong>Text:</strong> Marica Rocca</div>
+      <div><strong>With:</strong> Lucio Notarnicola</div>
+      <div><strong>Publisher:</strong> Corraini Edizioni</div>
+      <div><strong>Year:</strong> 2026</div>
+      <div><strong>Language:</strong> English</div>
     </div>
 
     <div class="buttons">
-      <a class="button" href="https://corraini.com/it/super-fluo.html" target="_blank">
-        Sito editore
+
+      <a class="button"
+         href="https://corraini.com/it/super-fluo.html"
+         target="_blank">
+        Publisher website
       </a>
 
-      <a class="button blue" href="INSERISCI-LINK-AMAZON" target="_blank">
+      <a class="button blue"
+         href="https://www.amazon.it/dp/B0GTC9D7Q7"
+         target="_blank">
         Amazon
       </a>
+
     </div>
+
+    <div class="note">
+      English edition of the illustrated book <em>Super Fluo</em>,
+      published by Corraini Edizioni.
+    </div>
+
   </div>
 
-</section>
-
-<section class="section">
-  <h2>Di cosa parla</h2>
-
-  <div class="box">
-    <p>
-      Qui puoi inserire una descrizione più personale dell’edizione inglese,
-      oppure spiegare il rapporto con il libro originale.
-    </p>
-  </div>
 </section>
 
 </main>
@@ -200,10 +210,10 @@ footer a{
 <footer>
   <p>
     © Marica Rocca ·
-    <a href="mailto:marica.rocca91@gmail.com">marica.rocca91@gmail.com</a> ·
     <a href="https://www.instagram.com/m_acky/" target="_blank">@m_acky</a>
   </p>
 </footer>
 
 </body>
 </html>
+```
