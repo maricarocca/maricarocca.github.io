@@ -189,7 +189,7 @@ nav a:hover{
 
 .books{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(3,1fr);
   gap:42px;
 }
 
@@ -491,6 +491,31 @@ nav a:hover{
   .slide-arrow{
     opacity:1;
   }
+
+  @media(max-width:760px){
+  header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:16px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+
+  nav a{
+    margin-left:0;
+  }
+
+  .slide-arrow{
+    opacity:1;
+  }
+
+  .books{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
@@ -532,7 +557,7 @@ nav a:hover{
 </section>
 
 <section class="section" id="libri">
-  <h2 class="section-title">I miei libri</h2>
+ <h2 class="section-title">I miei libri</h2>
 
   <div class="books">
 
@@ -553,13 +578,20 @@ nav a:hover{
           </a>
 
         </div>
+      </div>
+
+      <button class="slide-arrow"
+              onclick="nextSlide(event, this)"
+              aria-label="Mostra traduzione">
+      </button>
+    </div>
 
     <a class="book" href="lukas-nematomas-berniukas.html">
       <img class="cover" src="images/lukas-nematomas-berniukas.png" alt="Lukas, nematomas berniukas">
       <h3>Lukas, nematomas berniukas</h3>
       <p>Misteris Pinkmanas · 2025</p>
     </a>
-    
+
     <div class="book-card slider">
       <div class="slider-window">
         <div class="slider-track">
@@ -577,14 +609,6 @@ nav a:hover{
           </a>
 
         </div>
-      </div>
-
-      <button class="slide-arrow"
-              onclick="nextSlide(event, this)"
-              aria-label="Mostra traduzione">
-      </button>
-    </div>
-
       </div>
 
       <button class="slide-arrow"
@@ -688,6 +712,8 @@ a insegnanti e classi di età diverse.
 
   <p>
     Sei un'insegnante, una biblioteca, una libreria o un festival?
+     </p>
+        <p>
     Puoi inviarmi una richiesta per incontri, letture e laboratori.
   </p>
 
