@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Super Fluo | Marica Rocca</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +18,8 @@
   --text:#2b2b2b;
   --accent:#ef6c8f;
   --blue:#5aa6d1;
+  --yellow:#ffd966;
+  --mint:#bcefd5;
   --lavender:#dcccf6;
 }
 
@@ -28,7 +32,9 @@ body{
   font-family:'Nunito Sans',sans-serif;
 }
 
-header{ padding:28px 6vw; }
+header{
+  padding:28px 6vw;
+}
 
 header a{
   color:var(--text);
@@ -36,7 +42,9 @@ header a{
   font-weight:700;
 }
 
-main{ padding:40px 6vw 90px; }
+main{
+  padding:40px 6vw 90px;
+}
 
 .book-hero{
   display:grid;
@@ -68,9 +76,26 @@ h1{
 }
 
 .description{
-  font-size:1.25rem;
-  line-height:1.8;
+  font-size:1.12rem;
+  line-height:1.9;
   max-width:720px;
+  text-align:justify;
+}
+
+.opening-quote{
+  font-family:'Georgia',serif;
+  font-style:italic;
+  font-size:1.8rem;
+  line-height:1.5;
+  color:var(--accent);
+  margin-bottom:40px;
+  max-width:700px;
+}
+
+.box p{
+  font-size:1.08rem;
+  line-height:1.9;
+  text-align:justify;
 }
 
 .meta{
@@ -97,9 +122,13 @@ h1{
   font-weight:800;
 }
 
-.button.blue{ background:var(--blue); }
+.button.blue{
+  background:var(--blue);
+}
 
-.section{ margin-top:90px; }
+.section{
+  margin-top:90px;
+}
 
 .section h2{
   font-family:'Bricolage Grotesque',sans-serif;
@@ -115,9 +144,25 @@ h1{
   max-width:900px;
 }
 
-.box p{
-  font-size:1.15rem;
-  line-height:1.8;
+.backstage-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+}
+
+.backstage-card{
+  background:white;
+  border-radius:24px;
+  padding:22px;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+}
+
+.backstage-card img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:18px;
+  background:var(--lavender);
 }
 
 footer{
@@ -133,7 +178,9 @@ footer a{
 }
 
 @media(max-width:800px){
-  .book-hero{ grid-template-columns:1fr; }
+  .book-hero{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
@@ -157,9 +204,20 @@ footer a{
 
     <h1>Super Fluo</h1>
 
+    <div class="opening-quote">
+      Non tutti i superpoteri fanno rumore. Alcuni fanno ridere una nonnina.
+    </div>
+
     <p class="description">
-      Un supereroe apparentemente inutile, una Nonnina speciale
-      e una storia sui poteri quotidiani della cura.
+      I supereroi non sono tutti uguali. C’è chi ritrova gli occhiali del papà,
+      chi scalda il pranzo con un tocco e chi aggiusta tutto trasformando le mani
+      in utensili.
+      Con Super Fluo, però, è tutta un’altra storia. Lui è convinto di avere poteri
+      straordinari: far crescere i fiori, spostare il Sole con lo yoga, far smettere
+      di piovere dopo giorni di intensa concentrazione.
+      Ma c’è una persona per cui Super Fluo è davvero un supereroe: la sua adorata
+      Nonnina. Per lei trova il modo di far crescere i fiori, spostare il Sole,
+      fermare la pioggia e soprattutto farla ridere di gusto.
     </p>
 
     <div class="meta">
@@ -167,6 +225,8 @@ footer a{
       <div><strong>Con:</strong> Lucio Notarnicola</div>
       <div><strong>Editore:</strong> Corraini Edizioni</div>
       <div><strong>Anno:</strong> 2026</div>
+      <div><strong>Età:</strong> Dai 5 anni</div>
+     
     </div>
 
     <div class="buttons">
@@ -186,10 +246,57 @@ footer a{
   <h2>Di cosa parla</h2>
 
   <div class="box">
+
     <p>
-      Qui puoi inserire una descrizione più personale del libro:
-      chi è Super Fluo, che cosa sa fare e perché il suo potere è speciale.
+      <em>Super Fluo</em> è una storia sui superpoteri che non sembrano superpoteri.
+      Quelli piccoli, quotidiani, quasi invisibili.
     </p>
+
+    <p>
+      Super Fluo sogna grandi imprese, ma il suo talento più speciale nasce
+      quando è accanto alla sua Nonnina: ascoltarla, aiutarla, farle compagnia,
+      inventare modi per farla stare bene.
+    </p>
+
+    <p>
+      È un libro sull’attenzione e sull’empatia, su quello che possiamo fare
+      per le persone che amiamo. Anche quando non sappiamo volare, sollevare palazzi
+      o fermare davvero la pioggia.
+    </p>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Backstage</h2>
+
+  <div class="backstage-grid">
+
+    <div class="backstage-card">
+      <img src="images/superfluo-backstage-1.jpg" alt="Backstage Super Fluo">
+      <h3>Superpoteri improbabili</h3>
+      <p>
+        Idee, tentativi e piccoli poteri quotidiani da cui è nato il mondo di Super Fluo.
+      </p>
+    </div>
+
+    <div class="backstage-card">
+      <img src="images/superfluo-backstage-2.jpg" alt="Bozzetto Super Fluo">
+      <h3>Le prime immagini</h3>
+      <p>
+        Studi, prove e materiali visivi legati alla costruzione del personaggio.
+      </p>
+    </div>
+
+    <div class="backstage-card">
+      <img src="images/superfluo-backstage-3.jpg" alt="Dettagli Super Fluo">
+      <h3>Cose rimaste fuori</h3>
+      <p>
+        Appunti, idee e dettagli che non sono arrivati fino alla versione finale,
+        ma fanno ancora parte della storia.
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -198,10 +305,10 @@ footer a{
 <footer>
   <p>
     © Marica Rocca ·
-    <a href="mailto:marica.rocca91@gmail.com">marica.rocca91@gmail.com</a> ·
     <a href="https://www.instagram.com/m_acky/" target="_blank">@m_acky</a>
   </p>
 </footer>
 
 </body>
 </html>
+```
