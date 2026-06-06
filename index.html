@@ -213,8 +213,9 @@ nav a:hover{
 
 .book h3,
 .book-card h3{
-  margin:18px 0 6px;
+  margin:22px 0 8px;
   font-size:1.35rem;
+  text-align:center;
 }
 
 .book p,
@@ -222,6 +223,8 @@ nav a:hover{
   color:#666;
   line-height:1.6;
   margin:0;
+  text-align:center;
+  font-size:.95rem;
 }
 
 .slider{
@@ -528,7 +531,38 @@ nav a:hover{
 
   <div class="books">
 
-   <div class="book-card slider">
+    <div class="book-card slider">
+      <div class="slider-window">
+        <div class="slider-track">
+
+          <a class="slider-slide" href="mi-manchi-una-balena.html">
+            <img class="cover" src="images/mi-manchi-una-balena.png" alt="Mi manchi una balena">
+            <h3>Mi manchi una balena</h3>
+            <p>Lapis Edizioni · 2024</p>
+          </a>
+
+          <a class="slider-slide" href="je-taime-gros-comme-une-baleine.html">
+            <img class="cover" src="images/je-taime-gros-comme-une-baleine.png" alt="Je t'aime gros comme une baleine">
+            <h3>Je t’aime gros comme une baleine</h3>
+            <p>Courtes et Longues · 2026</p>
+          </a>
+
+        </div>
+      </div>
+
+      <button class="slide-arrow"
+              onclick="nextSlide(event, this)"
+              aria-label="Mostra traduzione">
+      </button>
+    </div>
+
+    <a class="book" href="lukas-nematomas-berniukas.html">
+      <img class="cover" src="images/lukas-nematomas-berniukas.png" alt="Lukas, nematomas berniukas">
+      <h3>Lukas, nematomas berniukas</h3>
+      <p>Misteris Pinkmanas · 2025</p>
+    </a>
+
+    <div class="book-card slider">
       <div class="slider-window">
         <div class="slider-track">
 
@@ -548,45 +582,12 @@ nav a:hover{
       </div>
 
       <button class="slide-arrow"
-        onclick="nextSlide(event, this)"
-        aria-label="Mostra traduzione">
-       </button>
+              onclick="nextSlide(event, this)"
+              aria-label="Mostra traduzione">
+      </button>
     </div>
-
-     
-
-    <a class="book" href="lukas-nematomas-berniukas.html">
-      <img class="cover" src="images/lukas-nematomas-berniukas.png" alt="Lukas, nematomas berniukas">
-      <h3>Lukas, nematomas berniukas</h3>
-      <p>Misteris Pinkmanas · 2025</p>
-    </a>
 
   </div>
-
-   <div class="book-card slider">
-      <div class="slider-window">
-        <div class="slider-track">
-
-          <a class="slider-slide" href="mi-manchi-una-balena.html">
-            <img class="cover" src="images/mi-manchi-una-balena.png" alt="Mi manchi una balena">
-            <h3>Mi manchi una balena</h3>
-            <p>Lapis Edizioni · 2024</p>
-          </a>
-
-          <a class="slider-slide" href="je-taime-gros-comme-une-baleine.html">
-            <img class="cover" src="images/je-taime-gros-comme-une-baleine.png" alt="Je t'aime gros comme une baleine">
-            <h3>Je t’aime gros comme une baleine</h3>
-            <p>Courtes et Longues · 2026</p>
-          </a>
-
-        </div>
-      </div>
-
-     <button class="slide-arrow"
-        onclick="nextSlide(event, this)"
-        aria-label="Mostra traduzione">
-</button>
-    </div>
 </section>
 
 <section class="section white" id="laboratori">
