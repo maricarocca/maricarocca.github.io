@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Materiali | Marica Rocca</title>
+<title>Materiali da scaricare | Marica Rocca</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,44 +13,153 @@
 
 <style>
 
+:root{
+  --bg:#fff9f1;
+  --paper:#ffffff;
+  --text:#2b2b2b;
+  --accent:#ef6c8f;
+  --mint:#bcefd5;
+}
+
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
-  background:#fff9f1;
-  color:#2b2b2b;
+  background:var(--bg);
+  color:var(--text);
   font-family:'Nunito Sans',sans-serif;
 }
 
 main{
-  max-width:900px;
+  max-width:980px;
   margin:auto;
   padding:80px 24px;
 }
 
 a{
-  color:#ef6c8f;
+  color:var(--accent);
   text-decoration:none;
   font-weight:700;
 }
 
 h1{
   font-family:'Bricolage Grotesque',sans-serif;
-  font-size:4rem;
-  margin-bottom:20px;
+  font-size:clamp(3rem,7vw,5rem);
+  margin-bottom:18px;
 }
 
-.box{
-  background:white;
-  padding:40px;
-  border-radius:24px;
-  box-shadow:0 10px 28px rgba(0,0,0,.08);
-}
-
-p{
+.intro{
+  max-width:720px;
+  font-size:1.15rem;
   line-height:1.8;
-  font-size:1.1rem;
+  margin-bottom:50px;
+}
+
+.material-grid{
+  display:grid;
+  gap:28px;
+}
+
+.material-card{
+
+  background:white;
+
+  border-radius:26px;
+
+  padding:34px;
+
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+
+}
+
+.tag{
+
+  display:inline-block;
+
+  background:var(--mint);
+
+  padding:6px 14px;
+
+  border-radius:999px;
+
+  font-size:.85rem;
+
+  font-weight:700;
+
+  margin-bottom:18px;
+
+}
+
+.material-card h2{
+
+  margin:0 0 12px;
+
+  font-family:'Bricolage Grotesque',sans-serif;
+
+  font-size:2rem;
+
+}
+
+.material-card h3{
+
+  margin:0 0 18px;
+
+  font-size:1.2rem;
+
+}
+
+.material-card p{
+
+  line-height:1.8;
+
+  font-size:1.08rem;
+
+}
+
+.download{
+
+  display:inline-block;
+
+  margin-top:18px;
+
+  background:var(--accent);
+
+  color:white;
+
+  padding:14px 22px;
+
+  border-radius:999px;
+
+  font-weight:700;
+
+}
+
+.note{
+
+  margin-top:60px;
+
+  text-align:center;
+
+  color:#666;
+
+  font-style:italic;
+
+}
+
+@media(max-width:700px){
+
+.material-card{
+
+padding:24px;
+
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -58,22 +167,55 @@ p{
 <main>
 
 <p>
-  <a href="index.html">← Torna al sito</a>
+<a href="index.html">← Torna al sito</a>
 </p>
 
-<h1>Materiali</h1>
+<h1>Materiali da scaricare</h1>
 
-<div class="box">
+<p class="intro">
 
-  <p>
-    Sto preparando attività, schede e materiali scaricabili ispirati ai miei libri.
-  </p>
+Qui raccolgo attività, cartoline, giochi e piccoli materiali ispirati ai miei libri.
 
-  <p>
-    Questa sezione crescerà insieme alle storie.
-  </p>
+Puoi scaricarli gratuitamente, stamparli e usarli a casa, a scuola o in biblioteca.
+
+</p>
+
+<div class="material-grid">
+
+<div class="material-card">
+
+<span class="tag">📄 Da stampare</span>
+
+<h2>Mi manchi una balena</h2>
+
+<h3>Cartolina</h3>
+
+<p>
+
+Una cartolina ispirata a <em>Mi manchi una balena</em>.
+
+Puoi stamparla, scrivere un pensiero sul retro e regalarla a qualcuno a cui vuoi bene.
+
+</p>
+
+<a class="download"
+href="materiali/cartolina-mi-manchi-una-balena.pdf"
+target="_blank">
+
+Scarica il PDF
+
+</a>
 
 </div>
+
+</div>
+
+<p class="note">
+
+Questa raccolta crescerà insieme alle storie.
+Ogni tanto troverai un nuovo piccolo regalo da scaricare.
+
+</p>
 
 </main>
 
