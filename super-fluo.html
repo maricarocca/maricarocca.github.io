@@ -291,6 +291,45 @@ footer a{
   border-radius:14px;
 }
 
+
+/* Presentazioni: una sola foto, senza ingrandimento */
+.event-card{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);
+  gap:28px;
+  align-items:center;
+  padding:28px;
+  background:white;
+  border-radius:24px;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+}
+.event-copy h3{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:1.7rem;
+  margin:18px 0 12px;
+}
+.event-copy p{font-size:1.05rem;line-height:1.8;margin:0;}
+.event-photo{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  display:block;
+}
+.press-card .press-photo{margin:12px 0 14px;}
+@media(max-width:700px){
+  .event-card{grid-template-columns:1fr;}
+}
+
+
+/* Locandina IBBY: proporzioni originali, dimensione contenuta */
+.press-card .press-photo-ibby{
+  width:auto;
+  max-width:100%;
+  max-height:280px;
+  object-fit:contain;
+  align-self:center;
+}
+
 </style>
 </head>
 
@@ -437,17 +476,15 @@ footer a{
         IBBY Italia Choice 2026 nella categoria
         Picture Books.
       </p>
+      <img class="press-photo press-photo-ibby"
+           src="images/super-fluo-ibby-italia-choice.jpg"
+           alt="Super Fluo nella selezione Picture Books di IBBY Italia Choice 2026"
+           loading="lazy">
       <a
         href="https://www.bolognachildrensbookfair.com/media//libro/2027/Grand%20Tour/preview-ibby-italia-choice26-pieghevole.pdf"
         target="_blank"
         rel="noopener noreferrer">
         Scopri la selezione ↗
-      </a>
-      <a
-        href="https://www.linkedin.com/posts/corrainiedizioni-ibbyitalia-ibbychoice2026-ugcPost-7508464036531937280-kDEs/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Leggi l'annuncio di Corraini ↗
       </a>
     </article>
 
@@ -476,6 +513,10 @@ footer a{
         della Fondazione Štěpán Zavřel,
         a Sarmede.
       </p>
+      <img class="press-photo"
+           src="images/super-fluo-mostra-sarmede.jpg"
+           alt="Illustrazioni di Lucio Notarnicola per Super Fluo esposte alla mostra Le Immagini della Fantasia 44"
+           loading="lazy">
       <a
         href="https://fondazionezavrel.it/en/le-immagini-della-fantasia-44/"
         target="_blank"
@@ -487,6 +528,23 @@ footer a{
   </div>
 </section>
 
+
+
+<!-- PRESENTAZIONI E INCONTRI -->
+<section class="section" id="presentazioni">
+  <h2>Presentazioni e incontri</h2>
+  <div class="event-card">
+    <div class="event-copy">
+      <span class="press-tag">Presentazione · 24 ottobre 2026</span>
+      <h3>Libreria Sottobosco</h3>
+      <p>Un incontro in libreria per presentare <em>Super Fluo</em> e raccontare il suo piccolo, grande mondo di superpoteri quotidiani.</p>
+    </div>
+    <img class="event-photo"
+         src="images/super-fluo-libreria-sottobosco.jpg"
+         alt="Allestimento di Super Fluo alla Libreria Sottobosco il 24 ottobre 2026"
+         loading="lazy">
+  </div>
+</section>
 
 <!-- PARLANO DI SUPER FLUO -->
 
