@@ -282,52 +282,64 @@ footer a{
   box-shadow:0 8px 18px rgba(0,0,0,.08);
 }
 
-/* Immagine Beautiful Italian Books: non cliccabile */
-.press-photo{
+/* FOTO NEI RICONOSCIMENTI: tutte contenute nella stessa altezza */
+.press-card--recognition{
+  padding:24px;
+}
+.press-card--recognition .press-photo{
   display:block;
   width:100%;
-  height:auto;
-  margin-top:6px;
+  height:158px;
+  object-fit:contain; /* nessun taglio a scritte o copertine */
+  object-position:center;
+  background:#fff9f1;
   border-radius:14px;
+  padding:5px;
+  margin:12px 0 10px;
+}
+.press-card--recognition a{
+  margin-top:0;
+  padding-top:12px;
+}
+/* L'ultima parte della scheda si allinea senza ingrandire le immagini */
+.press-card--recognition .press-photo{
+  margin-top:auto;
 }
 
-
-/* Presentazioni: una sola foto, senza ingrandimento */
+/* PRESENTAZIONI: foto laterale più piccola e data ben visibile */
 .event-card{
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);
-  gap:28px;
+  grid-template-columns:minmax(0,1fr) 270px;
+  gap:24px;
   align-items:center;
-  padding:28px;
+  padding:24px;
+  max-width:900px;
   background:white;
   border-radius:24px;
   box-shadow:0 10px 28px rgba(0,0,0,.08);
 }
 .event-copy h3{
   font-family:'Bricolage Grotesque',sans-serif;
-  font-size:1.7rem;
-  margin:18px 0 12px;
+  font-size:1.55rem;
+  margin:14px 0 8px;
 }
-.event-copy p{font-size:1.05rem;line-height:1.8;margin:0;}
+.event-copy p{font-size:1rem;line-height:1.75;margin:0;}
+.event-copy .event-date{
+  color:#666;
+  font-weight:700;
+  margin:0 0 12px;
+}
 .event-photo{
-  width:100%;
-  height:auto;
-  border-radius:16px;
   display:block;
+  width:100%;
+  height:175px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:14px;
 }
-.press-card .press-photo{margin:12px 0 14px;}
 @media(max-width:700px){
   .event-card{grid-template-columns:1fr;}
-}
-
-
-/* Locandina IBBY: proporzioni originali, dimensione contenuta */
-.press-card .press-photo-ibby{
-  width:auto;
-  max-width:100%;
-  max-height:280px;
-  object-fit:contain;
-  align-self:center;
+  .event-photo{height:175px;}
 }
 
 </style>
@@ -468,7 +480,7 @@ footer a{
 
   <div class="press-grid">
 
-    <article class="press-card">
+    <article class="press-card press-card--recognition">
       <span class="press-tag">Selezione · 2026</span>
       <h3>IBBY Italia Choice</h3>
       <p>
@@ -476,7 +488,7 @@ footer a{
         IBBY Italia Choice 2026 nella categoria
         Picture Books.
       </p>
-      <img class="press-photo press-photo-ibby"
+      <img class="press-photo"
            src="images/super-fluo-ibby-italia-choice.jpg"
            alt="Super Fluo nella selezione Picture Books di IBBY Italia Choice 2026"
            loading="lazy">
@@ -488,7 +500,7 @@ footer a{
       </a>
     </article>
 
-    <article class="press-card">
+    <article class="press-card press-card--recognition">
       <span class="press-tag">Selezione · 2026</span>
       <h3>Beautiful Italian Books</h3>
       <p>
@@ -501,17 +513,15 @@ footer a{
            loading="lazy">
     </article>
 
-    <article class="press-card">
+    <article class="press-card press-card--recognition">
       <span class="press-tag">Mostra · 2026–2027</span>
       <h3>Le Immagini della Fantasia 44</h3>
       <p class="press-date">Dal 7 novembre 2026 al 14 febbraio 2027</p>
       <p>
-        Le illustrazioni di Lucio Notarnicola
-        per <em>Super Fluo</em> sono presenti
-        alla 44ª Mostra internazionale
-        d'illustrazione per l'infanzia
-        della Fondazione Štěpán Zavřel,
-        a Sarmede.
+        Le illustrazioni di Lucio Notarnicola per
+        <em>Super Fluo</em> sono esposte alla 44ª Mostra
+        internazionale d'illustrazione per l'infanzia
+        a Sarmede, presso la Fondazione Štěpán Zavřel.
       </p>
       <img class="press-photo"
            src="images/super-fluo-mostra-sarmede.jpg"
@@ -535,8 +545,9 @@ footer a{
   <h2>Presentazioni e incontri</h2>
   <div class="event-card">
     <div class="event-copy">
-      <span class="press-tag">Presentazione · 24 ottobre 2026</span>
+      <span class="press-tag">Presentazione</span>
       <h3>Libreria Sottobosco</h3>
+      <p class="event-date">24 ottobre 2026</p>
       <p>Un incontro in libreria per presentare <em>Super Fluo</em> e raccontare il suo piccolo, grande mondo di superpoteri quotidiani.</p>
     </div>
     <img class="event-photo"
