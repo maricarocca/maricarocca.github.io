@@ -181,6 +181,81 @@ footer a{
     grid-template-columns:1fr;
   }
 }
+
+
+/* RICONOSCIMENTI, RECENSIONI E STAMPA */
+
+.press-intro{
+  font-size:1.12rem;
+  line-height:1.8;
+  margin-bottom:28px;
+  max-width:720px;
+}
+
+.press-grid{
+  display:grid;
+  grid-template-columns:repeat(
+    auto-fit,
+    minmax(250px,1fr)
+  );
+  gap:22px;
+}
+
+.press-card{
+  background:white;
+  border-radius:24px;
+  padding:28px;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.press-card h3{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:1.4rem;
+  line-height:1.3;
+  margin:18px 0 10px;
+}
+
+.press-card p{
+  font-size:1rem;
+  line-height:1.75;
+  margin:0 0 14px;
+}
+
+.press-tag{
+  display:inline-block;
+  background:var(--lavender);
+  border-radius:999px;
+  padding:7px 14px;
+  font-size:.85rem;
+  font-weight:700;
+}
+
+.press-card:nth-child(even) .press-tag{
+  background:var(--mint);
+}
+
+.press-date{
+  color:#777;
+  font-size:.9rem !important;
+}
+
+.press-card a{
+  margin-top:auto;
+  padding-top:18px;
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:800;
+}
+
+.press-card a:hover{
+  text-decoration:underline;
+}
+
+  
 </style>
 </head>
 
@@ -304,6 +379,167 @@ footer a{
 
 </main>
 
+<!-- RICONOSCIMENTI E SELEZIONI -->
+
+<section class="section">
+  <h2>Riconoscimenti e selezioni</h2>
+
+  <div class="press-grid">
+
+    <article class="press-card">
+      <span class="press-tag">Selezione · 2026</span>
+      <h3>IBBY Italia Choice</h3>
+      <p>
+        <em>Super Fluo</em> è stato selezionato per
+        IBBY Italia Choice 2026 nella categoria
+        Picture Books.
+      </p>
+      <a
+        href="https://www.bolognachildrensbookfair.com/media//libro/2027/Grand%20Tour/preview-ibby-italia-choice26-pieghevole.pdf"
+        target="_blank"
+        rel="noopener noreferrer">
+        Scopri la selezione ↗
+      </a>
+    </article>
+
+    <article class="press-card">
+      <span class="press-tag">Selezione · 2026</span>
+      <h3>Beautiful Italian Books</h3>
+      <p>
+        <em>Super Fluo</em> è tra i libri selezionati
+        da Beautiful Italian Books, come annunciato
+        da Corraini Edizioni.
+      </p>
+      <a
+        href="https://it.linkedin.com/company/corraini-edizioni"
+        target="_blank"
+        rel="noopener noreferrer">
+        Corraini Edizioni ↗
+      </a>
+    </article>
+
+    <article class="press-card">
+      <span class="press-tag">Mostra · 2026–2027</span>
+      <h3>Le Immagini della Fantasia 44</h3>
+      <p>
+        Le illustrazioni di Lucio Notarnicola
+        per <em>Super Fluo</em> sono presenti
+        alla 44ª Mostra internazionale
+        d'illustrazione per l'infanzia
+        della Fondazione Štěpán Zavřel,
+        a Sarmede.
+      </p>
+      <a
+        href="https://fondazionezavrel.it/en/le-immagini-della-fantasia-44/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Scopri la mostra ↗
+      </a>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- PARLANO DI SUPER FLUO -->
+
+<section class="section">
+  <h2>Parlano di Super Fluo</h2>
+
+  <p class="press-intro">
+    Recensioni, segnalazioni e consigli di lettura
+    dedicati al nostro piccolo supereroe.
+  </p>
+
+  <div class="press-grid">
+
+    <article class="press-card">
+      <span class="press-tag">Recensione</span>
+      <h3>MangaForever</h3>
+      <p class="press-date">3 novembre 2026</p>
+      <p>
+        Alfredo Paniconi racconta il libro
+        attraverso la scrittura, le illustrazioni
+        e la cura editoriale, soffermandosi
+        sul passaggio dall'ironia alla tenerezza.
+      </p>
+      <a
+        href="https://www.mangaforever.net/super-fluo-recensione/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Leggi la recensione ↗
+      </a>
+    </article>
+
+    <article class="press-card">
+      <span class="press-tag">Recensione</span>
+      <h3>Piccoli Libri</h3>
+      <p>
+        Una lettura che mette al centro
+        l'autostima, l'empatia e il valore
+        dei piccoli gesti di cura.
+      </p>
+      <a
+        href="https://piccolilibri.netsons.org/product/super-fluo-il-supereroe-che-non-sa-fare-niente/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Leggi la recensione ↗
+      </a>
+    </article>
+
+    <article class="press-card">
+      <span class="press-tag">Stampa</span>
+      <h3>Corriere della Sera · la Lettura</h3>
+      <p class="press-date">15 maggio 2026</p>
+      <p>
+        Una segnalazione nella newsletter
+        de <em>la Lettura</em>, tra i consigli
+        dedicati ai libri.
+      </p>
+      <a
+        href="https://www.corriere.it/newsletter/la-lettura/26_maggio_15/le-rivoluzioni-dell-intelligenza-artificiale.shtml"
+        target="_blank"
+        rel="noopener noreferrer">
+        Leggi la newsletter ↗
+      </a>
+    </article>
+
+    <article class="press-card">
+      <span class="press-tag">Radio</span>
+      <h3>Rai Radio Kids · Andersen</h3>
+      <p class="press-date">27 luglio 2026</p>
+      <p>
+        Una puntata de <em>I libri di Radio Kids</em>,
+        nella rassegna curata dalla rivista Andersen,
+        dedicata a <em>Super Fluo</em>.
+      </p>
+      <a
+        href="https://www.raiplaysound.it/programmi/ilibridiradiokids/puntate/2026"
+        target="_blank"
+        rel="noopener noreferrer">
+        Cerca la puntata ↗
+      </a>
+    </article>
+
+    <article class="press-card">
+      <span class="press-tag">Consigli di lettura</span>
+      <h3>Libreria Caleidoscopio</h3>
+      <p class="press-date">6 maggio 2026</p>
+      <p>
+        <em>Super Fluo</em> tra i consigli
+        dei librai nella newsletter
+        «Un inizio caleidoscopico».
+      </p>
+      <a
+        href="https://libreriacaleidoscopio.substack.com/p/un-inizio-caleidoscopico"
+        target="_blank"
+        rel="noopener noreferrer">
+        Leggi il consiglio ↗
+      </a>
+    </article>
+
+
+  
 <footer>
   <p>
     © Marica Rocca ·
