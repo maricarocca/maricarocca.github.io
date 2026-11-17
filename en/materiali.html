@@ -15,18 +15,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;family=Fraunces:ital,opsz,wght@1,9..144,500&amp;display=swap" rel="stylesheet"/>
 <link href="../assets/site.css" rel="stylesheet"/>
 <script defer="" src="../assets/site.js"></script>
-<style>
-/* Miniature della pagina Materiali: isolate da tutto il resto del sito. */
-.material-preview {
-  height: 262px; width: 100%; margin: 6px 0 22px;
-  overflow: hidden; border-radius: 17px; background: #168edf;
-  display: grid; place-items: center;
-}
-.material-preview img { width: 100%; height: 100%; object-fit: contain; }
-.material-preview--postcard { background: #3c9fe5; }
+<style>/* Materiali: immagini intere, pannelli allineati e testo essenziale */
+.materials-grid { align-items: stretch; }
+.material-card { padding: 26px; }
+.material-preview { display: grid; place-items: center; width: 100%; height: auto; aspect-ratio: 1200 / 850; margin: 6px 0 20px; border-radius: 16px; overflow: hidden; background: #1296d7; }
+.material-preview img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .material-card .material-preview + h2 { margin-top: 0; }
-.material-preview-caption { font-size: .77rem; color: var(--muted); margin-top: -12px; margin-bottom: 18px; }
-@media (max-width: 620px) { .material-preview { height: 235px; } }
+.material-card h2 { margin-bottom: 14px; }
+.material-card > p { margin-top: 0; margin-bottom: 14px; }
+.material-card .buttons { margin-top: auto; padding-top: 16px; }
+.material-card .small-note { margin-top: 4px; margin-bottom: 12px; }
+@media (max-width: 620px) { .material-card { padding: 22px; } }
 </style></head>
 <body>
 <a class="skip-link" href="#contenuto">Skip to content</a>
@@ -36,11 +35,11 @@
 <nav aria-label="Site language" class="language-switch"><a aria-label="Italiano" data-language="it" href="../materiali.html" hreflang="it" lang="it">IT</a><a aria-current="page" aria-label="English" data-language="en" href="materiali.html" hreflang="en" lang="en">EN</a></nav>
 </div></header>
 <main class="container simple-page" id="contenuto">
-<div class="back-row"><a class="back-button" href="index.html#libri"><span class="back-icon"><svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" viewbox="0 0 24 24"><path d="m14.5 5.5-6.5 6.5 6.5 6.5"></path></svg></span><span>Back to books</span></a></div><h1 class="page-heading">Resources to download</h1><p class="intro">Here you will find activities, postcards, games and little gifts inspired by my books. Download them for free, print them and use them at home, at school, in the library or wherever stories live on.</p><p class="note">Printable downloads are currently available in Italian.</p><div class="materials-grid"><article class="material-card"><span class="tag mint">Print at home</span><div class="material-preview material-preview--postcard"><img src="../images/anteprima-cartolina-balena.jpg" alt="Mockup of the Mi manchi una balena postcard on a blue painted background" loading="lazy"></div>
-<h2>Mi manchi una balena</h2><h3>Postcard</h3><p>A postcard inspired by <em>Mi manchi una balena</em>. Print it, write a message on the back and give it to someone you care about.</p>
-<div class="buttons"><a class="button materials" download="" href="../materiali/cartolina-mi-manchi-una-balena.pdf">Download PDF (Italian)</a></div></article><article class="material-card"><span class="tag mint">Print at home</span><div class="material-preview"><img alt="Mockup of the Invisible Notes with a black bowler hat on a blue background" loading="lazy" src="../images/anteprima-biglietti-invisibili.jpg"/></div>
-<h2>Invisible notes</h2><h3>A little gift for the next reader</h3><p>A note to print and leave between the pages of a book. Offer the person who finds it a kind word, a thought or a little drawing.</p>
-<div class="buttons"><a class="button materials" download="" href="../materiali/biglietti-invisibili.pdf">Download PDF (Italian)</a></div><p class="small-note">Inspired by <em>Lukas</em>, but ready to travel in any book.</p></article></div><p class="note collection-note">This collection will grow alongside the stories. From time to time, a new little gift will appear to print, use or send on its way.</p><div class="back-bottom"><a class="back-button" href="index.html#libri"><span class="back-icon"><svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" viewbox="0 0 24 24"><path d="m14.5 5.5-6.5 6.5 6.5 6.5"></path></svg></span><span>Back to books</span></a></div>
+<div class="back-row"><a class="back-button" href="index.html#libri"><span class="back-icon"><svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" viewbox="0 0 24 24"><path d="m14.5 5.5-6.5 6.5 6.5 6.5"></path></svg></span><span>Back to books</span></a></div><h1 class="page-heading">Resources to download</h1><p class="intro">Here you will find activities, postcards, games and little gifts inspired by my books. Download them for free, print them and use them at home, at school, in the library or wherever stories live on.</p><p class="note">Printable downloads are currently available in Italian.</p><div class="materials-grid"><article class="material-card"><span class="tag mint">Print at home</span><div class="material-preview material-preview--postcard"><img alt="Mockup of the Mi manchi una balena postcard on a blue painted background" decoding="async" height="850" loading="lazy" src="../images/anteprima-cartolina-balena.jpg" width="1200"/></div>
+<h2>Mi manchi una balena</h2><p>A postcard inspired by <em>Mi manchi una balena</em>. Print it, write a message on the back and give it to someone you care about.</p>
+<div class="buttons"><a class="button materials" download="" href="../materiali/cartolina-mi-manchi-una-balena.pdf">Download PDF (Italian)</a></div></article><article class="material-card"><span class="tag mint">Print at home</span><div class="material-preview"><img alt="Mockup of the Invisible Notes with a black bowler hat on a blue background" decoding="async" height="850" loading="lazy" src="../images/anteprima-biglietti-invisibili.jpg" width="1200"/></div>
+<h2>Invisible notes</h2><p>A note to print and leave between the pages of a book. Offer the person who finds it a kind word, a thought or a little drawing. Inspired by <em>Lukas</em>, but ready to travel in any book.</p>
+<div class="buttons"><a class="button materials" download="" href="../materiali/biglietti-invisibili.pdf">Download PDF (Italian)</a></div></article></div><p class="note collection-note">This collection will grow alongside the stories. From time to time, a new little gift will appear to print, use or send on its way.</p><div class="back-bottom"><a class="back-button" href="index.html#libri"><span class="back-icon"><svg aria-hidden="true" class="icon" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" viewbox="0 0 24 24"><path d="m14.5 5.5-6.5 6.5 6.5 6.5"></path></svg></span><span>Back to books</span></a></div>
 </main>
 <footer class="site-footer"><p>© Marica Rocca · <a href="mailto:marica.rocca91@gmail.com">Email</a> · <a class="footer-instagram" href="https://www.instagram.com/m_acky/" rel="noopener noreferrer" target="_blank">@m_acky</a></p></footer>
 </body>
